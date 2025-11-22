@@ -1,6 +1,12 @@
 # recipe_app
 
-A new Flutter project.
+Lab2 
+
+![](screenshots/Slika1.jpg)
+![](screenshots/Slika2.jpg)
+![](screenshots/Slika3.jpg)
+![](screenshots/Slika4.jpg)
+
 
 ## Getting Started
 
