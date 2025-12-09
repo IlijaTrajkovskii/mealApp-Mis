@@ -1,6 +1,6 @@
 # recipe_app
 
-Lab2 
+Lab2 & Lab3
 
 ![](screenshots/Slika1.jpg)
 ![](screenshots/Slika2.jpg)
