@@ -4,7 +4,6 @@ import 'package:recipe_app/models/meal_model.dart';
 import 'package:recipe_app/services/api_service.dart';
 import 'package:recipe_app/widgets/category_card.dart';
 
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -15,10 +14,13 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   List<Category> categories = [];
   List<Category> filtered = [];
+
   bool isLoading = true;
 
   final ApiService api = ApiService();
   final TextEditingController search = TextEditingController();
+
+
 
   @override
   void initState() {
@@ -26,7 +28,9 @@ class _HomePageState extends State<HomePage> {
     loadCategories();
   }
 
-  void loadCategories() async {
+
+  void loadCategories() async 
+  {
     List<Category> result = await api.getCategories();
     setState(() {
       categories = result;
@@ -56,7 +60,8 @@ class _HomePageState extends State<HomePage> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) 
+  {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Recipes'),
@@ -64,6 +69,12 @@ class _HomePageState extends State<HomePage> {
           IconButton(
             onPressed: openRandom,
             icon: const Icon(Icons.shuffle),
+          ),
+          IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/favorites');
+            },
+            icon: const Icon(Icons.favorite),
           ),
         ],
       ),
